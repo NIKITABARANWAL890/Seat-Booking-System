@@ -86,46 +86,6 @@ const updateSeatCount = () =>{
     selectedSeatsCount.innerText = seatCount;
     totalBill.innerText = seatCount*moviePrice.innerText;
 }
-// const seatSelected = (e) => {
-//     console.log("Seat clicked:", e.target.id);
-//     const selectedSeats = e.currentTarget;
-//     const seatNumber = selectedSeats.id;
-
-//     if (selectedSeats.classList.contains("occupiedSeat")) {
-//         console.log("Occupied seat clicked");
-//         alert("Sold out!");
-//         return;
-//     }
-
-//     if (selectedSeats.classList.contains("selectedSeat")) {
-//         // Deselect seat
-//         selectedSeats.classList.remove("selectedSeat"); 
-//         selectedSeatsArr = selectedSeatsArr.filter(id => id !== seatNumber);
-        
-//         // Remove from UI display
-//         document.querySelector(`.selected-seat-number[data-id="${seatNumber}"]`)?.remove();
-//     } else {
-//         if (!selectedSeatsArr.includes(seatNumber)) { // Only add if not already present
-//             if (selectedSeatsArr.length == 0) {
-//                 showSelectedSeats.textContent = "";
-//             }
-            
-//             selectedSeats.classList.add("selectedSeat"); // Select seat
-//             selectedSeatsArr.push(seatNumber);
-
-//             // Add to UI display
-//             const newSeat = document.createElement("div");
-//             newSeat.classList.add("selected-seat-number");
-//             newSeat.setAttribute("data-id", seatNumber); // Assign unique identifier
-//             newSeat.innerText = seatNumber;
-//             showSelectedSeats.appendChild(newSeat);
-//         }
-//     }
-
-//     console.log(selectedSeatsArr);
-//     updateSeatCount(); // Update count after changes
-// };
-
 
 const seatSelected = (e) => {
     console.log("Seat clicked:", e.target.id);
