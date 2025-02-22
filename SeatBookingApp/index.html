@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seat Booking App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="seats-status available">
+            <i class="fa-solid fa-square"></i><p>Avaialable</p>
+        </div>
+        <div class="seats-status selected">
+            <i class="fa-solid fa-square"></i><p>Selected</p>
+        </div>
+        <div class="seats-status occupied">
+            <i class="fa-solid fa-square"></i><p>Occupied</p>
+        </div>
+    </header>
+    <main>
+        <div class="screen-display">
+            <h3 class="screen-display-header">Screen</h3>
+            <div class="seats-display">
+                <div class="first-column">
+                </div>
+                <div class="second-column">
+                </div>
+                <div class="third-column">
+                </div>
+            </div>
+        </div>
+        <div class="ticket-booking">
+            <div class="select-movie">
+                <p>SELECT YOUR MOVIE</p>
+                <select name="movie" id="select" onchange="selectMovie(event)" class="movie-select">
+                    <!-- <option value="movie">The Avengers</option>
+                    <option value="iron-man">Iron Man</option>
+                    <option value="flash">Flash</option> -->
+                </select>
+            </div>
+            <div class="movie-name">
+                <p>Movie Name</p>
+                <h2 class="name">Flash</h2>
+            </div>
+            <div class="movie-price">
+                <p>Movie Price</p>
+                <h2 class="cost"><i class="fa-solid fa-dollar-sign"></i> 7</h2>
+            </div>
+            <div class="movie-date">
+                <p>Date</p>
+                <h3 class="date">22 June, 2023</h3>
+            </div>
+            <div class="seats-selected">
+                <p>Selected Seats</p>
+                <div class="selected-seats-display">
+                    <!-- <div class="selected-seat-number">45
+                    </div>
+                    <div class="selected-seat-number">45
+                    </div> -->
+                </div>
+            </div>
+            <div class="total-bill">
+                    <h3> <div class="count">0</div> Seats(s)</h3>
+                    <div class="bill"><i class="fa-solid fa-dollar-sign"></i>7</div>
+            </div>
+            <div class="movie-buttons">
+                <button class="continue-btn" onclick="handleSubmit(event)">Continue</button>
+                <button class="cancel-btn" onclick="handleCancel(event)">Cancel</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
